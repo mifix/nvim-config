@@ -12,26 +12,7 @@
   />
 </h1>
 
-<p align="center">
-  <a href="https://github.com/glepnir/cosynvim/stargazers">
-    <img
-      alt="Stargazers"
-      src="https://img.shields.io/github/stars/glepnir/cosynvim?style=for-the-badge&logo=starship&color=c678dd&logoColor=d9e0ee&labelColor=282a36"
-    />
-  </a>
-  <a href="https://github.com/glepnir/cosynvim/issues">
-    <img
-      alt="Issues"
-      src="https://img.shields.io/github/issues/glepnir/cosynvim?style=for-the-badge&logo=gitbook&color=f0c062&logoColor=d9e0ee&labelColor=282a36"
-    />
-  </a>
-  <a href="https://github.com/glepnir/cosynvim/contributors">
-    <img
-      alt="Contributors"
-      src="https://img.shields.io/github/contributors/glepnir/cosynvim?style=for-the-badge&logo=opensourceinitiative&color=abcf84&logoColor=d9e0ee&labelColor=282a36"
-    />
-  </a>
-</p>
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/41671631/176990490-aeb6111b-41ea-4767-bc03-c0aee4774a4e.png"
@@ -218,11 +199,5 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 linux
 xset r rate 210 40
 ```
-
-## Donate
-
-[![](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/bobbyhub)
-
-If you'd like to support my work financially, buy me a drink through [paypal](https://paypal.me/bobbyhub)
 
 ## Licenese MIT
