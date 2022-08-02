@@ -5,7 +5,7 @@
 local config = {}
 
 function config.catppuccin()
-  vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
+  vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 
   require("catppuccin").setup({
     compile = {
@@ -34,7 +34,7 @@ function config.catppuccin()
       cmp = false,
       lsp_saga = false,
       gitgutter = false,
-      gitsigns = false,
+      gitsigns = true,
       leap = false,
       telescope = true,
       nvimtree = {

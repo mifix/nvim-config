@@ -17,10 +17,7 @@ plugin({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 plugin({
   'feline-nvim/feline.nvim',
   config = conf.feline,
-  requires = {
-    'kyazdani42/nvim-web-devicons',
-  --  { 'catppuccin/nvim', as = 'catppuccin'},
-  }
+  requires = 'kyazdani42/nvim-web-devicons',
 })
 
 plugin({
@@ -41,3 +38,9 @@ plugin({
   config = conf.indentlines
 })
 
+plugin({
+  'lewis6991/gitsigns.nvim',
+  config = function()
+    require('gitsigns').setup()
+  end
+})
