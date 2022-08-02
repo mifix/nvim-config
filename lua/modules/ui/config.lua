@@ -5,7 +5,7 @@
 local config = {}
 
 function config.catppuccin()
-  vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+  vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
 
   require("catppuccin").setup({
     compile = {
@@ -79,8 +79,13 @@ function config.catppuccin()
   vim.cmd [[colorscheme catppuccin]]
 end
 
-function config.galaxyline()
-  require('modules.ui.eviline')
+function config.feline()
+  local ctp_feline = require('catppuccin.groups.integrations.feline')
+  -- ctp_feline.setup()
+
+  require("feline").setup({
+    components = ctp_feline.get(),
+  })
 end
 
 function config.dashboard()

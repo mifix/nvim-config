@@ -15,10 +15,12 @@ plugin({
 plugin({ 'glepnir/dashboard-nvim', config = conf.dashboard })
 
 plugin({
-  'glepnir/galaxyline.nvim',
-  branch = 'main',
-  config = conf.galaxyline,
-  requires = 'kyazdani42/nvim-web-devicons',
+  'feline-nvim/feline.nvim',
+  config = conf.feline,
+  requires = {
+    'kyazdani42/nvim-web-devicons',
+  --  { 'catppuccin/nvim', as = 'catppuccin'},
+  }
 })
 
 plugin({
