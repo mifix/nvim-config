@@ -24,14 +24,14 @@ function config.dashboard()
     {
       icon = '  ',
       desc = 'Update Plugins                          ',
-      shortcut = 'SPC p u',
+      shortcut = ', p u',
       action = 'PackerUpdate',
     },
     {
       icon = '  ',
       desc = 'Find  File                              ',
       action = 'Telescope find_files find_command=rg,--hidden,--files',
-      shortcut = 'SPC f f',
+      shortcut = ', ,',
     },
   }
 end
@@ -46,11 +46,41 @@ function config.nvim_bufferline()
   })
 end
 
-function config.nvim_tree()
-  require('nvim-tree').setup({
-    disable_netrw = false,
-    hijack_cursor = true,
-    hijack_netrw = true,
+function config.neotree()
+  -- Unless you are still migrating, remove the deprecated commands from v1.x
+  vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
+  require('neo-tree').setup({
+    add_blank_line_at_top = true,
+    close_if_last_window = true,
+    source_selector = {
+      --winbar = false,  -- requires neovim 0.8+
+      statusline = true
+    },
+    popup_border_style = "rounded",
+    filesystem = {
+      window = {
+        mappings = {
+          ["o"] = "system_open",
+        },
+      },
+      commands = {
+        system_open = function(state)
+          local node = state.tree:get_node()
+          local path = node:get_id()
+          vim.api.nvim_command("silent !xdg-open " .. path)
+        end,
+      },
+    },
+    event_handlers = {
+      {
+        event = "file_opened",
+        handler = function(file_path)
+          --auto close
+          require("neo-tree").close_all()
+        end
+      },
+    }
   })
 end
 

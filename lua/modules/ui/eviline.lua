@@ -10,7 +10,7 @@ end
 local colors = require('galaxyline.theme').default
 local condition = require('galaxyline.condition')
 local gls = galaxyline.section
-galaxyline.short_line_list = { 'NvimTree', 'vista', 'dbui', 'packer' }
+galaxyline.short_line_list = { 'neotree', 'NvimTree', 'vista', 'dbui', 'packer' }
 
 gls.left[1] = {
   RainbowRed = {
