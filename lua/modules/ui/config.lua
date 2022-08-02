@@ -8,12 +8,6 @@ function config.catppuccin()
   vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
 
   require("catppuccin").setup({
-    dim_inactive = {
-      enabled = true,
-      shade = "dark",
-      percentage = 0.25,
-    },
-    transparent_background = true,
     compile = {
       enabled = true,
       path = vim.fn.stdpath "cache" .. "/catppuccin",
@@ -60,7 +54,7 @@ function config.catppuccin()
       which_key = false,
       indent_blankline = {
         enabled = true,
-        colored_indent_levels = false,
+        colored_indent_levels = true,
       },
       dashboard = true,
       neogit = false,
@@ -159,6 +153,15 @@ function config.neotree()
       },
     }
   })
+end
+
+
+function config.indentlines()
+  require("indent_blankline").setup {
+    show_current_context = true,
+    show_current_context_start = false,
+    space_char_blankline = " ",
+  }
 end
 
 return config
