@@ -4,8 +4,85 @@
 
 local config = {}
 
-function config.zephyr()
-  vim.cmd('colorscheme zephyr')
+function config.catppuccin()
+  vim.g.catppuccin_flavour = "frappe" -- latte, frappe, macchiato, mocha
+
+  require("catppuccin").setup({
+    dim_inactive = {
+      enabled = true,
+      shade = "dark",
+      percentage = 0.25,
+    },
+    transparent_background = true,
+    compile = {
+      enabled = true,
+      path = vim.fn.stdpath "cache" .. "/catppuccin",
+    },
+    integrations = {
+      treesitter = true,
+      native_lsp = {
+        enabled = false,
+        virtual_text = {
+          errors = { "italic" },
+          hints = { "italic" },
+          warnings = { "italic" },
+          information = { "italic" },
+        },
+        underlines = {
+          errors = { "underline" },
+          hints = { "underline" },
+          warnings = { "underline" },
+          information = { "underline" },
+        },
+      },
+      coc_nvim = false,
+      lsp_trouble = false,
+      cmp = false,
+      lsp_saga = false,
+      gitgutter = false,
+      gitsigns = false,
+      leap = false,
+      telescope = true,
+      nvimtree = {
+        enabled = false,
+        show_root = true,
+        transparent_panel = false,
+      },
+      neotree = {
+        enabled = true,
+        show_root = true,
+        transparent_panel = true,
+      },
+      dap = {
+        enabled = false,
+        enable_ui = false,
+      },
+      which_key = false,
+      indent_blankline = {
+        enabled = true,
+        colored_indent_levels = false,
+      },
+      dashboard = true,
+      neogit = false,
+      vim_sneak = false,
+      fern = false,
+      barbar = false,
+      bufferline = false,
+      markdown = false,
+      lightspeed = false,
+      ts_rainbow = false,
+      hop = false,
+      notify = false,
+      telekasten = false,
+      symbols_outline = false,
+      mini = false,
+      aerial = false,
+      vimwiki = false,
+      beacon = false,
+    },
+  })
+
+  vim.cmd [[colorscheme catppuccin]]
 end
 
 function config.galaxyline()
