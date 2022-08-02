@@ -32,4 +32,13 @@ function config.telescope()
   require('telescope').load_extension('fzy_native')
 end
 
+
+function config.lastplace()
+  require'nvim-lastplace'.setup({
+    lastplace_ignore_buftype = {"quickfix", "nofile", "help"},
+    lastplace_ignore_filetype = {"gitcommit", "gitrebase", "svn", "hgcommit"},
+    lastplace_open_folds = true
+})
+end
+
 return config

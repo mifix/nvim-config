@@ -15,3 +15,8 @@ plugin({
     { 'nvim-telescope/telescope-fzy-native.nvim', opt = true },
   },
 })
+
+plugin({
+  'ethanholz/nvim-lastplace',
+  config = conf.lastplace,
+})
