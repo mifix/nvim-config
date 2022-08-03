@@ -20,14 +20,15 @@ xmap({ ',', '', opts(noremap) })
 nmap({
   -- noremal remap
   -- close buffer
-  { '<C-x>k', cmd('bdelete'), opts(noremap, silent) },
+  { ',q', cmd('bdelete'), opts(noremap, silent) },
   -- save
-  { '<C-s>', cmd('write'), opts(noremap) },
+  { '<CR>', cmd('write'), opts(noremap) },
   -- yank
   { 'Y', 'y$', opts(noremap) },
   -- buffer jump
   { ']b', cmd('bn'), opts(noremap) },
   { '[b', cmd('bp'), opts(noremap) },
+  { ',j', cmd('e#'), opts(noremap) },
   -- remove trailing white space
   { '<Leader>t', cmd('TrimTrailingWhitespace'), opts(noremap) },
   -- window jump
@@ -35,6 +36,8 @@ nmap({
   { '<C-l>', '<C-w>l', opts(noremap) },
   { '<C-j>', '<C-w>j', opts(noremap) },
   { '<C-k>', '<C-w>k', opts(noremap) },
+  -- clear search higlights
+  { '<BS>', cmd('nohlsearch'), opts(noremap) },
 })
 
 imap({
