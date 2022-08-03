@@ -42,4 +42,9 @@ function config.lastplace()
 })
 end
 
+
+function config.comment()
+  require('nvim_comment').setup()
+end
+
 return config

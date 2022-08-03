@@ -21,3 +21,9 @@ plugin({
   'ethanholz/nvim-lastplace',
   config = conf.lastplace,
 })
+
+
+plugin({
+  'terrortylor/nvim-comment',
+  config = conf.comment,
+})
