@@ -47,4 +47,8 @@ function config.comment()
   require('nvim_comment').setup()
 end
 
+function config.todo()
+  require('todo-comments').setup()
+end
+
 return config

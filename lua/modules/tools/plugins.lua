@@ -13,6 +13,7 @@ plugin({
   requires = {
     { 'nvim-lua/popup.nvim', opt = true },
     { 'nvim-lua/plenary.nvim', opt = false },
+    -- FIX: fzf or fzy native extension
     -- { 'nvim-telescope/telescope-fzf-native.nvim',  run = 'make' },
   },
 })
@@ -26,4 +27,10 @@ plugin({
 plugin({
   'terrortylor/nvim-comment',
   config = conf.comment,
+})
+
+plugin({
+  'folke/todo-comments.nvim',
+  requires = { { 'nvim-lua/plenary.nvim', opt = false } },
+  config = conf.todo,
 })
