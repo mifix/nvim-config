@@ -35,7 +35,8 @@ plugin({ 'akinsho/nvim-bufferline.lua', config = conf.nvim_bufferline, requires 
 
 plugin({
   'lukas-reineke/indent-blankline.nvim',
-  config = conf.indentlines
+  config = conf.indentlines,
+  --after = 'nvim-treesitter'
 })
 
 plugin({

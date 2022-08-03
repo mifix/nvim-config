@@ -7,12 +7,13 @@ local conf = require('modules.tools.config')
 
 plugin({
   'nvim-telescope/telescope.nvim',
+  branch = '0.1.x',
   cmd = 'Telescope',
   config = conf.telescope,
   requires = {
     { 'nvim-lua/popup.nvim', opt = true },
     { 'nvim-lua/plenary.nvim', opt = false },
-    { 'nvim-telescope/telescope-fzy-native.nvim', opt = true },
+    -- { 'nvim-telescope/telescope-fzf-native.nvim',  run = 'make' },
   },
 })
 
