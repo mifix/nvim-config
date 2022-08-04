@@ -29,6 +29,7 @@ nmap({
   { ']b', cmd('bn'), opts(noremap) },
   { '[b', cmd('bp'), opts(noremap) },
   { ',j', cmd('e#'), opts(noremap) },
+  { ',b', cmd('Telescope buffers'), opts(noremap) },
   -- remove trailing white space
   { '<Leader>t', cmd('TrimTrailingWhitespace'), opts(noremap) },
   -- window jump
